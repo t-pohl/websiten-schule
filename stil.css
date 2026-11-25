@@ -1,0 +1,62 @@
+/* Uebersichtsseiten der Sammlung. Optik angelehnt an informatik-buch.info (Stufen-/Feld-Kacheln). */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+body { font-family: 'Segoe UI', system-ui, sans-serif; background: #f7f8fa; color: #1a1a2e; line-height: 1.6; }
+a { color: #2563eb; }
+
+.leiste { background: #1b1f24; padding: .8rem 2rem; position: sticky; top: 0; z-index: 10; }
+.marke { display: inline-flex; align-items: baseline; text-decoration: none; font-size: 1.35rem; line-height: 1; }
+.marke-name { color: #fff; font-weight: 800; }
+.marke-punkt { color: #4fe0dc; font-weight: 800; }
+.marke-zusatz { color: #c3ccd4; font-weight: 400; }
+
+main { max-width: 1150px; margin: 0 auto; padding: 1.6rem 1.5rem 3rem; }
+h1 { font-size: 2rem; letter-spacing: -.01em; margin-bottom: .4rem; }
+.einleitung { color: #475569; margin-bottom: .5rem; }
+.krumen { font-size: .92rem; color: #64748b; margin-bottom: .6rem; }
+.krumen a { color: #2563eb; text-decoration: none; }
+.krumen a:hover { text-decoration: underline; }
+.krumen .trenner { margin: 0 .3rem; color: #94a3b8; }
+
+.kacheln {
+  display: grid; gap: 1.1rem; margin: 1.2rem 0 2.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 250px), 1fr));
+}
+.stufen-kachel, .feld-kachel {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; gap: .35rem;
+  min-height: 150px; padding: 1.2rem 1.3rem; border-radius: 14px; color: #fff; text-decoration: none;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, .18); transition: transform .15s ease, box-shadow .15s ease;
+}
+.stufen-kachel:hover, .feld-kachel:hover { transform: translateY(-3px); box-shadow: 0 10px 24px rgba(15, 23, 42, .28); }
+.stufen-kachel:focus-visible, .feld-kachel:focus-visible { outline: 3px solid #4fe0dc; outline-offset: 3px; }
+
+.stufen-kachel { min-height: 170px; background: linear-gradient(135deg, #1b1f24 0%, #1e3348 60%, #135e66 100%); }
+.stufen-kachel-titel { font-size: 1.7rem; font-weight: 800; letter-spacing: -.01em; }
+.stufen-kachel-sub { color: #c3ccd4; font-size: .92rem; }
+.stufen-kachel-zahl {
+  margin-top: auto; align-self: flex-start; font-size: .8rem; font-weight: 600; color: #1b1f24;
+  background: #4fe0dc; border-radius: 999px; padding: .15rem .65rem;
+}
+
+.feld-kachel-bereich { font-size: .75rem; font-weight: 700; text-transform: uppercase; letter-spacing: .06em; opacity: .85; }
+.feld-kachel-titel { font-size: 1.2rem; font-weight: 800; line-height: 1.25; }
+.feld-kachel-text { font-size: .9rem; opacity: .92; }
+.feld-kachel-marke {
+  margin-top: auto; align-self: flex-start; font-size: .78rem; font-weight: 700;
+  background: rgba(255, 255, 255, .22); border-radius: 999px; padding: .15rem .65rem;
+}
+.bereich-daten { background: linear-gradient(135deg, #1e3a8a, #2563eb); }
+.bereich-systeme { background: linear-gradient(135deg, #4c1d95, #7c3aed); }
+.bereich-algorithmen { background: linear-gradient(135deg, #115e59, #0d9488); }
+.bereich-ki { background: linear-gradient(135deg, #9a3412, #ea580c); }
+.bereich-sicherheit { background: linear-gradient(135deg, #7f1d1d, #dc2626); }
+.bereich-theorie { background: linear-gradient(135deg, #312e81, #4f46e5); }
+
+@media (max-width: 600px) {
+  .leiste { padding: .7rem 1rem; }
+  main { padding: 1.2rem 1rem 2rem; }
+  h1 { font-size: 1.6rem; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .stufen-kachel, .feld-kachel { transition: none; }
+  .stufen-kachel:hover, .feld-kachel:hover { transform: none; }
+}

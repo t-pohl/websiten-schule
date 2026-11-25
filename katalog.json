@@ -1,0 +1,56 @@
+{
+  "klassen": [
+    {
+      "id": "7",
+      "titel": "Klasse 7",
+      "reihen": [
+        {
+          "id": "entwurf-und-blockbasierte-implementierung",
+          "titel": "Entwurf und blockbasierte Implementierung",
+          "seiten": [
+            {
+              "id": "maehroboter-lab",
+              "titel": "Mähroboter-Lab",
+              "beschreibung": "Calliope-Übungsumgebung (basiert auf Open Roberta Lab)",
+              "datum": "2026-11-20",
+              "art": "programm"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "10hf",
+      "titel": "Klasse 10HF",
+      "reihen": [
+        {
+          "id": "informatisches-problemloesen",
+          "titel": "Informatisches Problemlösen",
+          "seiten": [
+            {
+              "id": "tsp-wettbewerb",
+              "titel": "Die schnellste Lkw-Rundreise",
+              "beschreibung": "Wettbewerb: Rundreise durch Zentraleuropa",
+              "datum": "2026-11-10",
+              "art": "wettbewerb"
+            },
+            {
+              "id": "minimaler-spannbaum",
+              "titel": "Minimaler Spannbaum",
+              "beschreibung": "Simulationen fürs Plenum, Kruskal Schritt für Schritt",
+              "datum": "2026-11-25",
+              "art": "tafelbild"
+            },
+            {
+              "id": "schatzkiste",
+              "titel": "Die Schatzkiste",
+              "beschreibung": "Einstieg Rucksackproblem",
+              "datum": "2026-11-26",
+              "art": "tafelbild"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
